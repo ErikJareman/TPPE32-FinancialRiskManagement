@@ -335,6 +335,5 @@ function res = VaR(C, Vp, confidence)
     nStock = size(C, 2);
     w = (1 / nStock) .* ones(nStock, 1);
     sigma = sqrt(w' * C * w);
-    
     res = norminv(confidence) * sigma * Vp;
 end
